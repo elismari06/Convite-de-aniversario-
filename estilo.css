@@ -1,0 +1,162 @@
+/* Importa a fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif; /* Define a fonte principal */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+    margin: 0; /* Remove margens padrão do corpo */
+    background: linear-gradient(135deg, #fceabb, #f8b500); /* Fundo com gradiente suave */
+    color: #333; /* Cor do texto padrão */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Espaçamento interno geral */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+.container {
+    background-color: #fff; /* Fundo branco para o container */
+    padding: 40px; /* Espaçamento interno do container */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    max-width: 600px; /* Largura máxima do container */
+    width: 100%; /* Ocupa a largura total disponível */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    transition: transform 0.3s ease-in-out; /* Transição para efeitos futuros */
+}
+
+/* Efeito ao passar o mouse no container */
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: #ff6f61; /* Cor vibrante para o título */
+    margin-bottom: 25px; /* Espaçamento abaixo do título */
+    font-size: 2.5em; /* Tamanho da fonte do título */
+    font-weight: 700; /* Negrito */
+}
+
+p {
+    margin-bottom: 15px; /* Espaçamento abaixo dos parágrafos */
+    line-height: 1.6; /* Altura da linha para melhor leitura */
+    font-size: 1.1em; /* Tamanho da fonte dos parágrafos */
+}
+
+.invite-button {
+    display: inline-block; /* Permite definir largura e altura */
+    background-color: #ff6f61; /* Cor do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 15px 30px; /* Espaçamento interno do botão */
+    border-radius: 30px; /* Bordas bem arredondadas para parecer um "pill" */
+    text-decoration: none; /* Remove sublinhado do link */
+    margin-top: 30px; /* Espaçamento acima do botão */
+    font-size: 1.2em; /* Tamanho da fonte do botão */
+    font-weight: 600; /* Negrito */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.4); /* Sombra no botão */
+}
+
+/* Efeito ao passar o mouse no botão */
+.invite-button:hover {
+    background-color: #e65c50; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-3px); /* Leve levantamento */
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.6); /* Sombra mais intensa */
+}
+
+/* Estilo para a seção que estará escondida inicialmente */
+.hidden {
+    display: none; /* Esconde o elemento por padrão */
+    opacity: 0; /* Começa com opacidade 0 para a animação */
+    transform: translateY(20px); /* Começa um pouco abaixo para a animação */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transição suave para aparecer */
+}
+
+/* Estilo quando a seção está visível */
+.visible {
+    display: block; /* Exibe o elemento */
+    opacity: 1; /* Opacidade total */
+    transform: translateY(0); /* Posição final */
+}
+
+.invite-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+    margin-top: 30px; /* Espaçamento acima da imagem */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra na imagem */
+}
+
+.invite-time {
+    font-size: 1.8em; /* Tamanho maior para o horário */
+    font-weight: 700; /* Negrito */
+    color: #4CAF50; /* Cor verde para destacar o horário */
+    margin-top: 20px; /* Espaçamento acima do horário */
+    margin-bottom: 20px; /* Espaçamento abaixo do horário */
+}
+
+/* NOVO: Estilo para o botão do WhatsApp */
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 25px; /* Espaçamento acima do botão */
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); /* Sombra verde */
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851; /* Verde mais escuro ao passar o mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px; /* Reduz o padding em telas menores */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduz o tamanho do título */
+    }
+
+    p {
+        font-size: 1em; /* Reduz o tamanho dos parágrafos */
+    }
+
+    .invite-button, .whatsapp-button {
+        padding: 12px 25px; /* Ajusta o padding dos botões */
+        font-size: 1.1em; /* Ajusta o tamanho da fonte dos botões */
+    }
+
+    .invite-time {
+        font-size: 1.5em; /* Reduz o tamanho do horário */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px; /* Mais redução de padding */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Mais redução no título */
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .invite-button, .whatsapp-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
